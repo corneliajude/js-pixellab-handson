@@ -1,16 +1,14 @@
-var inputLength = document.getElementById('length');
-var inputWidth = document.getElementById('width');
+var inputRadius = document.getElementById('radius');
 var elementResult = document.getElementById('result');
 form = document.querySelector('form');
 
 form.addEventListener(
   'submit',
   function (e) {
-    var length = inputLength.value || 0;
-    var width = inputWidth.value || 0;
+    var radius = inputRadius.value || 0;
     result = 0;
 
-    result = length * width;
+    result = 4 * Math.PI * Math.pow(radius, 3);
 
     elementResult.innerText = result;
 
